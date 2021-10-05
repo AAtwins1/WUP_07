@@ -1,7 +1,7 @@
 ---
 title: "covid 19"
 author: "Adriana Pimentel"
-date: "9/30/2021"
+date: "10/5/2021"
 output:
   html_document: default
   pdf_document: default
@@ -40,7 +40,16 @@ with(kRdata, table(Sex, result))
 
 `
 
-  
+```{r}
+barchartGC(~result + sex,data=kRdata)
+```
+
+In this data there are more women than men alive. They outnumber the males significantly as shown by the blue bar in the frequency chart above. The chart also shows that in this group people there are more people alive than dead as shown by the two bars labeled alive on the left and the two bars labeled dead on the right. 
+
+```{r}
+barchartGC(~result + sex,data=kRdata, type="percent")
+
+``` 
 
 
 
